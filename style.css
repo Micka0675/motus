@@ -171,6 +171,7 @@
     background-color: rgba(0, 89, 255, 0.986);
   }
   
+
   /**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.
@@ -443,6 +444,8 @@ input{
     font-size: 45px;
     text-transform: uppercase;
     margin:2px;
+    -webkit-text-fill-color: white;
+    opacity: 1; /* required on iOS */
 }
 
 #retry1 input{
