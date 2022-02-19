@@ -448,6 +448,10 @@ input{
     opacity: 1; /* required on iOS */
 }
 
+input[disabled]{
+    opacity: 1;
+}
+
 #retry1 input{
     width: 120px;
     height: 50px;
