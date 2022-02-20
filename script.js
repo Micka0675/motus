@@ -3,6 +3,7 @@ var ligne2 = document.getElementsByClassName("ligne2");
 var ligne3 = document.getElementsByClassName("ligne3");
 var ligne4 = document.getElementsByClassName("ligne4");
 var ligne5 = document.getElementsByClassName("ligne5");
+var cases = document.getElementsByClassName("cases");
 var valeur = document.querySelectorAll("input").value;
 var play = document.getElementById("play");
 var zoneJeu = document.getElementById("zoneJeu");
@@ -11,110 +12,110 @@ var retent1 = document.getElementById("retry1");
 var retent2 = document.getElementById("retry2");
 var regles = document.getElementById("reglesDuJeu");
 var listMot = [
-    "MANGA",
-    "DATEE",
-    "CADET",
-    "FUSEE",
-    "CAFES",
-    "LEGER",
-    "UNTEL",
-    "VENEZ",
-    "BOIRE",
-    "BETON",
-    "JOUIR",
-    "CUITE",
-    "SERVE",
-    "IDEES",
-    "FINIR",
-    "RENES",
-    "MAINE",
-    "ROUTE",
-    "GENRE",
-    "OPERA",
-    "BISOU",
-    "POELE",
-    "OPTEZ",
-    "CLOUD",
-    "BIJOU",
-    "FILES",
-    "ENFIN",
-    "OPIUM",
-    "JAVEL",
-    "HEROS",
-    "FERAS",
-    "PLANS",
-    "ICONE",
-    "LISSE",
-    "VULVE",
-    "BASES",
-    "CHAUD",
-    "PISTE",
-    "GRADE",
-    "ROULE",
-    "GOUTE",
-    "REPAS",
-    "ECRAN",
-    "NUQUE",
-    "SERAI",
-    "FIRME",
-    "VERSA",
-    "INDEX",
-    "FLUTE",
-    "PLAGE",
-    "RESTE",
-    "MENUS",
-    "BATTU",
-    "STYLE",
-    "UNION",
-    "GOLFE",
-    "GRADE",
-    "SUCRE",
-    "VOICI",
-    "CABLE",
-    "MAINS",
-    "MINOU",
-    "BERCE",
-    "GREVE",
-    "SAUCE",
-    "ACIER",
-    "CANON",
-    "CERNE",
-    "BATON",
-    "PETIT",
-    "MUNIR",
-    "RAGER",
-    "CUIRE",
-    "STYLO",
-    "FLEAU",
-    "REPIT",
-    "AIMER",
-    "PAINS",
-    "MOMIE",
-    "PLUIE",
-    "LAICS",
-    "BADGE",
-    "LENTS",
-    "RESTE",
-    "CLIPS",
-    "VODKA",
-    "GRUES",
-    "PRISE",
-    "FAUVE",
-    "DICTE",
-    "NEUFS",
-    "SONDE",
-    "SAUTE",
-    "ECART",
-    "BARBE",
-    "SCENE",
-    "COTES",
-    "TELLE",
-    "DUNES",
-    "RACES",
-    "RECUE",
-    "PORTE",
-    "ECOLE",
-    "PARIS"];
+    "manie",
+    "dates",
+    "cadet",
+    "furet",
+    "cafes",
+    "leger",
+    "untel",
+    "veine",
+    "boire",
+    "beton",
+    "jouir",
+    "cuite",
+    "servi",
+    "ideal",
+    "final",
+    "figue",
+    "saine",
+    "route",
+    "grecs",
+    "opera",
+    "bisou",
+    "poete",
+    "optez",
+    "clous",
+    "bijou",
+    "files",
+    "enfin",
+    "opium",
+    "javel",
+    "heros",
+    "feras",
+    "plans",
+    "icone",
+    "liste",
+    "sevir",
+    "bases",
+    "chaud",
+    "piste",
+    "grade",
+    "roule",
+    "goute",
+    "repas",
+    "ecran",
+    "nuque",
+    "serai",
+    "firme",
+    "versa",
+    "index",
+    "flute",
+    "plage",
+    "reste",
+    "menus",
+    "repos",
+    "style",
+    "cogne",
+    "verso",
+    "grade",
+    "sucre",
+    "crade",
+    "cable",
+    "mains",
+    "minou",
+    "clefs",
+    "grief",
+    "sauce",
+    "acier",
+    "canon",
+    "cotes",
+    "baton",
+    "petit",
+    "munir",
+    "rager",
+    "cuire",
+    "stylo",
+    "fleau",
+    "repit",
+    "aimer",
+    "pains",
+    "momie",
+    "pluie",
+    "laics",
+    "badge",
+    "lents",
+    "caste",
+    "clips",
+    "vodka",
+    "grues",
+    "prise",
+    "fauve",
+    "dicte",
+    "neufs",
+    "sonde",
+    "saute",
+    "ecart",
+    "barbe",
+    "decus",
+    "cotes",
+    "plein",
+    "dunes",
+    "races",
+    "recul",
+    "porte",
+    "ecole",
+    "paris"];
 
 
 var motChoisi = listMot[Math.floor(Math.random()*103)];
@@ -141,7 +142,7 @@ play.addEventListener('click', partie);
 
 function partie()
 {
-     
+        
     
     ligne1[0].disabled = false;
     
@@ -154,7 +155,7 @@ function partie()
         {
             if(event.key === "Enter")
             {
-                
+                ligne1[0].value; 
                 tabRep.push(ligne1[0].value);
                 if (ligne1[0].value == charAtrouv[0])
                 {
@@ -166,7 +167,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne1[0].value == charAtrouv[i] && ligne1[0].value != charAtrouv[0])
+                        if (ligne1[0].value == charAtrouv[i] && ligne1[0].value !== charAtrouv[0])
                         {
                             ligne1[0].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[0].disabled = true;
@@ -181,7 +182,7 @@ function partie()
                         }
                     }
             }
-                       
+        console.log(ligne1[0].value);               
         }
         ligne1[1].addEventListener("keypress" , check2);
         function check2(event)
@@ -199,7 +200,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne1[1].value == charAtrouv[i] && ligne1[1].value != charAtrouv[1])
+                        if (ligne1[1].value == charAtrouv[i] && ligne1[1].value !== charAtrouv[1] && ligne1[1].value !== ligne1[0].value)
                         {
                             ligne1[1].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[1].disabled = true;
@@ -215,6 +216,7 @@ function partie()
                     }
                     
             }  
+            console.log(ligne1[1].value);
         }
         ligne1[2].addEventListener("keypress" , check3);
         function check3(event)
@@ -232,7 +234,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne1[2].value == charAtrouv[i] && ligne1[2].value != charAtrouv[2])
+                        if (ligne1[2].value == charAtrouv[i] && ligne1[2].value !== charAtrouv[2] && ligne1[2].value !== ligne1[0].value && ligne1[2].value !== ligne1[1].value )
                         {
                             ligne1[2].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[2].disabled = true;
@@ -248,6 +250,7 @@ function partie()
                     }
                     
             }
+            console.log(ligne1[2].value);
         }
         ligne1[3].addEventListener("keypress" , check4);
         function check4(event)
@@ -265,7 +268,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne1[3].value == charAtrouv[i] && ligne1[3].value != charAtrouv[3])
+                        if (ligne1[3].value == charAtrouv[i] && ligne1[3].value !== charAtrouv[3] && ligne1[3].value !== ligne1[0].value && ligne1[3].value !== ligne1[1].value && ligne1[3].value !== ligne1[2].value)
                         {
                             ligne1[3].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[3].disabled = true;
@@ -281,6 +284,7 @@ function partie()
                     }
                     
             }
+            console.log(ligne1[3].value);
         }
         ligne1[4].addEventListener("keypress" , check5);
         function check5(event)
@@ -310,7 +314,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne1[4].value == charAtrouv[i] && ligne1[4].value != charAtrouv[4])
+                        if (ligne1[4].value == charAtrouv[i] && ligne1[4].value !== charAtrouv[4] && ligne1[4].value !== ligne1[0].value && ligne1[4].value !== ligne1[1].value && ligne1[4].value !== ligne1[2].value && ligne1[4].value !== ligne1[3].value)
                         {
                             ligne1[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[4].disabled = true;
@@ -326,7 +330,7 @@ function partie()
                     }
                         
             }
-            essai ++;
+            console.log(ligne1[4].value);
         }
     
         ligne2[0].addEventListener("keypress" , check6);
@@ -379,7 +383,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne2[1].value == charAtrouv[i] && ligne2[1].value != charAtrouv[1])
+                        if (ligne2[1].value == charAtrouv[i] && ligne2[1].value != charAtrouv[1] && ligne2[1].value != ligne2[0].value)
                         {
                             ligne2[1].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne2[1].disabled = true;
@@ -412,7 +416,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne2[2].value == charAtrouv[i] && ligne2[2].value != charAtrouv[2])
+                        if (ligne2[2].value == charAtrouv[i] && ligne2[2].value != charAtrouv[2] && ligne2[2].value != ligne2[0].value && ligne2[2].value != ligne2[1].value)
                         {
                             ligne2[2].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne2[2].disabled = true;
@@ -445,7 +449,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne2[3].value == charAtrouv[i] && ligne2[3].value != charAtrouv[3])
+                        if (ligne2[3].value == charAtrouv[i] && ligne2[3].value != charAtrouv[3] && ligne2[3].value != ligne2[0].value && ligne2[3].value != ligne2[1].value && ligne2[3].value != ligne2[2].value)
                         {
                             ligne2[3].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne2[3].disabled = true;
@@ -492,7 +496,7 @@ function partie()
                 
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne2[4].value == charAtrouv[i] && ligne2[4].value != charAtrouv[4])
+                        if (ligne2[4].value == charAtrouv[i] && ligne2[4].value != charAtrouv[4] && ligne2[4].value != ligne2[0].value && ligne2[4].value != ligne2[1].value && ligne2[4].value != ligne2[2].value && ligne2[4].value != ligne2[3].value)
                         {
                             ligne2[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne2[4].disabled = true;
@@ -562,7 +566,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne3[1].value == charAtrouv[i] && ligne3[1].value != charAtrouv[1])
+                        if (ligne3[1].value == charAtrouv[i] && ligne3[1].value != charAtrouv[1] && ligne3[1].value != ligne3[0].value)
                         {
                             ligne3[1].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne3[1].disabled = true;
@@ -596,7 +600,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne3[2].value == charAtrouv[i] && ligne3[2].value != charAtrouv[2])
+                        if (ligne3[2].value == charAtrouv[i] && ligne3[2].value != charAtrouv[2] && ligne3[2].value != ligne3[0].value && ligne3[2].value != ligne3[1].value)
                         {
                             ligne3[2].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne3[2].disabled = true;
@@ -630,7 +634,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne3[3].value == charAtrouv[i] && ligne3[3].value != charAtrouv[3])
+                        if (ligne3[3].value == charAtrouv[i] && ligne3[3].value != charAtrouv[3] && ligne3[3].value != ligne3[0].value && ligne3[3].value != ligne3[1].value && ligne3[3].value != ligne3[2].value)
                         {
                             ligne3[3].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne3[3].disabled = true;
@@ -677,7 +681,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne3[4].value == charAtrouv[i] && ligne3[4].value != charAtrouv[4])
+                        if (ligne3[4].value == charAtrouv[i] && ligne3[4].value != charAtrouv[4] && ligne3[4].value != ligne3[0].value && ligne3[4].value != ligne3[1].value && ligne3[4].value != ligne3[2].value && ligne3[4].value != ligne3[3].value)
                         {
                             ligne3[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne3[4].disabled = true;
@@ -748,7 +752,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne4[1].value == charAtrouv[i] && ligne4[1].value != charAtrouv[1])
+                        if (ligne4[1].value == charAtrouv[i] && ligne4[1].value != charAtrouv[1] && ligne4[1].value != ligne4[0].value)
                         {
                             ligne4[1].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne4[1].disabled = true;
@@ -782,7 +786,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne4[2].value == charAtrouv[i] && ligne4[2].value != charAtrouv[2])
+                        if (ligne4[2].value == charAtrouv[i] && ligne4[2].value != charAtrouv[2] && ligne4[2].value != ligne4[0].value && ligne4[2].value != ligne4[1].value)
                         {
                             ligne4[2].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne4[2].disabled = true;
@@ -816,7 +820,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne4[3].value == charAtrouv[i] && ligne4[3].value != charAtrouv[3])
+                        if (ligne4[3].value == charAtrouv[i] && ligne4[3].value != charAtrouv[3] && ligne4[3].value != ligne4[0].value && ligne4[3].value != ligne4[1].value && ligne4[3].value != ligne4[2].value)
                         {
                             ligne4[3].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne4[3].disabled = true;
@@ -864,7 +868,7 @@ function partie()
                 {
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne4[4].value == charAtrouv[i] && ligne4[4].value != charAtrouv[4])
+                        if (ligne4[4].value == charAtrouv[i] && ligne4[4].value != charAtrouv[4] && ligne4[4].value != ligne4[0].value && ligne4[4].value != ligne4[1].value && ligne4[4].value != ligne4[2].value && ligne4[4].value != ligne4[3].value)
                         {
                             ligne4[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne4[4].disabled = true;
@@ -934,7 +938,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne5[1].value == charAtrouv[i] && ligne5[1].value != charAtrouv[1])
+                        if (ligne5[1].value == charAtrouv[i] && ligne5[1].value != charAtrouv[1] && ligne5[1].value != ligne5[0].value)
                         {
                             ligne5[1].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne5[1].disabled = true;
@@ -967,7 +971,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne5[2].value == charAtrouv[i] && ligne5[2].value != charAtrouv[2])
+                        if (ligne5[2].value == charAtrouv[i] && ligne5[2].value != charAtrouv[2] && ligne5[2].value != ligne5[0].value && ligne5[2].value != ligne5[1].value)
                         {
                             ligne5[2].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne5[2].disabled = true;
@@ -1000,7 +1004,7 @@ function partie()
                 else
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne5[3].value == charAtrouv[i] && ligne5[3].value != charAtrouv[3])
+                        if (ligne5[3].value == charAtrouv[i] && ligne5[3].value != charAtrouv[3] && ligne5[3].value != ligne5[0].value && ligne5[3].value != ligne5[1].value && ligne5[3].value != ligne5[2].value)
                         {
                             ligne5[3].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne5[3].disabled = true;
@@ -1050,7 +1054,7 @@ function partie()
                 var compRep = charAtrouv.join("");
                     for(i = 0 ; i < 5 ; i ++)
                     {
-                        if (ligne5[4].value == charAtrouv[i] && ligne5[4].value != charAtrouv[4])
+                        if (ligne5[4].value == charAtrouv[i] && ligne5[4].value != charAtrouv[4] && ligne5[4].value != ligne5[0].value && ligne5[4].value != ligne5[1].value && ligne5[4].value != ligne5[2].value && ligne5[4].value != ligne5[3].value)
                         {
                             ligne5[4].style.backgroundColor = "rgb(241, 187, 10)";
                         }
