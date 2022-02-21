@@ -150,12 +150,16 @@ function partie()
     regles.style.display = "none";
     zoneJeu.style.display = "block";
     ligne1[1].focus();
+    console.log(charAtrouv);
     ligne1[0].value = charAtrouv[0];
+    console.log(charAtrouv);
         ligne1[1].addEventListener("keypress" , check2);
         function check2(event)
         {
             if(event.key === "Enter")
             {
+                tabRep.push(charAtrouv[0].value);
+                tabRep.push(ligne1[0].value);
                 tabRep.push(ligne1[1].value);
                 if (ligne1[1].value == charAtrouv[1])
                 {
@@ -305,8 +309,12 @@ function partie()
         ligne2[1].addEventListener("keypress" , check7);
         function check7(event)
         {
+            
             if(event.key === "Enter")
             {
+                tabRep = [];
+                tabRep.push(charAtrouv[0].value);
+                tabRep.push(ligne1[0].value);
                 tabRep.push(ligne2[1].value);
                 if (ligne2[1].value == charAtrouv[1])
                 {
@@ -458,6 +466,9 @@ function partie()
         {
             if(event.key === "Enter")
             {
+                tabRep = [];
+                tabRep.push(charAtrouv[0].value);
+                tabRep.push(ligne1[0].value);
                 tabRep.push(ligne3[1].value);
                 if (ligne3[1].value == charAtrouv[1])
                 {
@@ -613,6 +624,9 @@ function partie()
         {
             if(event.key === "Enter")
             {
+                tabRep = [];
+                tabRep.push(charAtrouv[0].value);
+                tabRep.push(ligne1[0].value);
                 tabRep.push(ligne4[1].value);
                 if (ligne4[1].value == charAtrouv[1])
                 {
@@ -763,46 +777,14 @@ function partie()
             }
             essai ++;
         }
-        ligne5[0].addEventListener("keypress" , check21);
-        function check21(event)
-        {
-            tabRep = [];
-            if(event.key === "Enter")
-            {
-                tabRep.push(ligne5[0].value);
-                if (ligne5[0].value == charAtrouv[0])
-                {
-                    ligne5[0].style.backgroundColor = "red";
-                    ligne5[0].disabled = true;
-                    ligne5[1].disabled = false;
-                    ligne5[1].focus();
-                }
-                else
-                {
-                    for(i = 0 ; i < 5 ; i ++)
-                    {
-                        if (ligne5[0].value == charAtrouv[i] && ligne5[0].value != charAtrouv[0])
-                        {
-                            ligne5[0].style.backgroundColor = "rgb(241, 187, 10)";
-                            ligne5[0].disabled = true;
-                            ligne5[1].disabled = false;
-                            ligne5[1].focus();
-                        }
-                        else
-                        {
-                            ligne5[0].disabled = true;
-                            ligne5[1].disabled = false;
-                            ligne5[1].focus();
-                        }
-                    }
-                }   
-            }
-        }
         ligne5[1].addEventListener("keypress" , check22);
         function check22(event)
         {
             if(event.key === "Enter")
             {
+                tabrep = [];
+                tabRep.push(charAtrouv[0].value);
+                tabRep.push(ligne1[0].value);
                 tabRep.push(ligne5[1].value);
                 if (ligne5[1].value == charAtrouv[1])
                 {
