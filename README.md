@@ -6,3 +6,10 @@ IMPORTANT: avant de jouer, n'oubliez pas d'activer les touches majuscules sur vo
 
 V1 ----------------------------------------------------------------------------------------------------------------------------------------------
 Version Desktop
+
+V2-----------------------------------------------------------------------------------------------------------------------------------------------
+Update Gameplay
+Now playable On mobile devices.
+Now, the first Letter is shown for each lines.
+Also, now Motus has no longer yellow box repetitions.
+LOwer Cases is required.
