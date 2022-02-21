@@ -144,46 +144,13 @@ function partie()
 {
         
     
-    ligne1[0].disabled = false;
+    ligne1[1].disabled = false;
     
     play.style.visibility = "hidden";
     regles.style.display = "none";
     zoneJeu.style.display = "block";
-    ligne1[0].focus();
-        ligne1[0].addEventListener("keypress" , check);
-        function check(event)
-        {
-            if(event.key === "Enter")
-            {
-                ligne1[0].value; 
-                tabRep.push(ligne1[0].value);
-                if (ligne1[0].value == charAtrouv[0])
-                {
-                    ligne1[0].style.backgroundColor = "red";
-                    ligne1[0].disabled = true;
-                    ligne1[1].disabled = false;
-                    ligne1[1].focus();
-                }
-                else
-                    for(i = 0 ; i < 5 ; i ++)
-                    {
-                        if (ligne1[0].value == charAtrouv[i] && ligne1[0].value !== charAtrouv[0])
-                        {
-                            ligne1[0].style.backgroundColor = "rgb(241, 187, 10)";
-                            ligne1[0].disabled = true;
-                            ligne1[1].disabled = false;
-                            ligne1[1].focus();
-                        }
-                        else
-                        {
-                            ligne1[0].disabled = true;
-                            ligne1[1].disabled = false;
-                            ligne1[1].focus();
-                        }
-                    }
-            }
-        console.log(ligne1[0].value);               
-        }
+    ligne1[1].focus();
+    ligne1[0].value = charAtrouv[0];
         ligne1[1].addEventListener("keypress" , check2);
         function check2(event)
         {
@@ -307,8 +274,9 @@ function partie()
                     else
                     {
                         ligne1[4].disabled = true;
-                        ligne2[0].disabled = false;
-                        ligne2[0].focus();
+                        ligne2[1].disabled = false;
+                        ligne2[0].value = charAtrouv[0];
+                        ligne2[1].focus();
                     }
                 }   
                 else
@@ -318,54 +286,21 @@ function partie()
                         {
                             ligne1[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne1[4].disabled = true;
-                            ligne2[0].disabled = false;
-                            ligne2[0].focus();
+                            ligne2[1].disabled = false;
+                            ligne2[0].value = charAtrouv[0];
+                            ligne2[1].focus();
                         }
                         else
                         {
                             ligne1[4].disabled = true;
-                            ligne2[0].disabled = false;
-                            ligne2[0].focus();
+                            ligne2[1].disabled = false;
+                            ligne2[0].value = charAtrouv[0];
+                            ligne2[1].focus();
                         }
                     }
                         
             }
             console.log(ligne1[4].value);
-        }
-    
-        ligne2[0].addEventListener("keypress" , check6);
-        function check6(event)
-        {
-            tabRep = [];
-            if(event.key === "Enter")
-            {
-                tabRep.push(ligne2[0].value);
-                if (ligne2[0].value == charAtrouv[0])
-                {
-                    ligne2[0].style.backgroundColor = "red";
-                    ligne2[0].disabled = true;
-                    ligne2[1].disabled = false;
-                    ligne2[1].focus();
-                }
-                else
-                    for(i = 0 ; i < 5 ; i ++)
-                    {
-                        if (ligne2[0].value == charAtrouv[i] && ligne2[0].value != charAtrouv[0])
-                        {
-                            ligne2[0].style.backgroundColor = "rgb(241, 187, 10)";
-                            ligne2[0].disabled = true;
-                            ligne2[1].disabled = false;
-                            ligne2[1].focus();
-                        }
-                        else
-                        {
-                            ligne2[0].disabled = true;
-                            ligne2[1].disabled = false;
-                            ligne2[1].focus();
-                        }
-                    }
-                    
-            }
         }
         ligne2[1].addEventListener("keypress" , check7);
         function check7(event)
@@ -488,8 +423,9 @@ function partie()
                     else
                     {
                         ligne2[4].disabled = true;
-                        ligne3[0].disabled = false;
-                        ligne3[0].focus();
+                        ligne3[1].disabled = false;
+                        ligne3[1].focus();
+                        ligne3[0].value = charAtrouv[0];
                     }
                 }
                 else
@@ -500,54 +436,22 @@ function partie()
                         {
                             ligne2[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne2[4].disabled = true;
-                            ligne3[0].disabled = false;
-                            ligne3[0].focus();
+                            ligne3[1].disabled = false;
+                            ligne3[1].focus();
+                            ligne3[0].value = charAtrouv[0];
                         }
                         else
                         {
                             ligne2[4].disabled = true;
-                            ligne3[0].disabled = false;
-                            ligne3[0].focus();
+                            ligne3[1].disabled = false;
+                            ligne3[1].focus();
+                            ligne3[0].value = charAtrouv[0];
                         }
                     }
                       
                 
             }
             essai ++;
-        }
-        ligne3[0].addEventListener("keypress" , check11);
-        function check11(event)
-        {
-            tabRep = [];
-            if(event.key === "Enter")
-            {
-                tabRep.push(ligne3[0].value);
-                if (ligne3[0].value == charAtrouv[0])
-                {
-                    ligne3[0].style.backgroundColor = "red";
-                    ligne3[0].disabled = true;
-                    ligne3[1].disabled = false;
-                    ligne3[1].focus();
-                }
-                else
-                    for(i = 0 ; i < 5 ; i ++)
-                    {
-                        if (ligne3[0].value == charAtrouv[i] && ligne3[0].value != charAtrouv[0])
-                        {
-                            ligne3[0].style.backgroundColor = "rgb(241, 187, 10)";
-                            ligne3[0].disabled = true;
-                            ligne3[1].disabled = false;
-                            ligne3[1].focus();
-                        }
-                        else
-                        {
-                            ligne3[0].disabled = true;
-                            ligne3[1].disabled = false;
-                            ligne3[1].focus();
-                        }
-                    }
-                    
-            }
         }
         ligne3[1].addEventListener("keypress" , check12);
         function check12(event)
@@ -572,6 +476,7 @@ function partie()
                             ligne3[1].disabled = true;
                             ligne3[2].disabled = false;
                             ligne3[2].focus();
+                            ligne3[1].value = charAtrouv[0];
                         }
                         else
                         {
@@ -673,8 +578,9 @@ function partie()
                     else
                     {
                         ligne3[4].disabled = true;
-                        ligne4[0].disabled = false;
-                        ligne4[0].focus();
+                        ligne4[1].disabled = false;
+                        ligne4[1].focus();
+                        ligne4[0].value = charAtrouv[0];
                     }
                 }
                 else
@@ -685,55 +591,22 @@ function partie()
                         {
                             ligne3[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne3[4].disabled = true;
-                            ligne4[0].disabled = false;
-                            ligne4[0].focus();
+                            ligne4[1].disabled = false;
+                            ligne4[1].focus();
+                            ligne4[0].value = charAtrouv[0];
                         }
                         else
                         {
                             ligne3[4].disabled = true;
-                            ligne4[0].disabled = false;
-                            ligne4[0].focus();
+                            ligne4[1].disabled = false;
+                            ligne4[1].focus();
+                            ligne4[0].value = charAtrouv[0];
                         }
                     }
                 }       
                 
             }
             essai ++;
-        }
-        ligne4[0].addEventListener("keypress" , check16);
-        function check16(event)
-        {
-            tabRep = [];
-            if(event.key === "Enter")
-            {
-                tabRep.push(ligne4[0].value);
-                if (ligne4[0].value == charAtrouv[0])
-                {
-                    ligne4[0].style.backgroundColor = "red";
-                    ligne4[0].disabled = true;
-                    ligne4[1].disabled = false;
-                    ligne4[1].focus();
-                }
-                else
-                {
-                    for(i = 0 ; i < 5 ; i ++)
-                    {
-                        if (ligne4[0].value == charAtrouv[i] && ligne4[0].value != charAtrouv[0])
-                        {
-                            ligne4[0].style.backgroundColor = "rgb(241, 187, 10)";
-                            ligne4[0].disabled = true;
-                            ligne4[1].disabled = false;
-                            ligne4[1].focus();
-                        }
-                        else
-                        {
-                            ligne4[0].disabled = true;
-                            ligne4[1].disabled = false;
-                            ligne4[1].focus();
-                        }
-                    }
-                }   
-            }
         }
         ligne4[1].addEventListener("keypress" , check17);
         function check17(event)
@@ -859,8 +732,9 @@ function partie()
                     else
                     {
                         ligne4[4].disabled = true;
-                        ligne5[0].disabled = false;
-                        ligne5[0].focus();
+                        ligne5[1].disabled = false;
+                        ligne5[1].focus();
+                        ligne5[0].value = charAtrouv[0];
                     }
                 }
 
@@ -872,14 +746,16 @@ function partie()
                         {
                             ligne4[4].style.backgroundColor = "rgb(241, 187, 10)";
                             ligne4[4].disabled = true;
-                            ligne5[0].disabled = false;
-                            ligne5[0].focus();
+                            ligne5[1].disabled = false;
+                            ligne5[1].focus();
+                            ligne5[0].value = charAtrouv[0];
                         }
                         else
                         {
                             ligne4[4].disabled = true;
-                            ligne5[0].disabled = false;
-                            ligne5[0].focus();
+                            ligne5[1].disabled = false;
+                            ligne5[1].focus();
+                            ligne5[0].value = charAtrouv[0];
                         }
                     }
                 }     
