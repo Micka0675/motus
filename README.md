@@ -2,7 +2,7 @@
 
 Bienvenue dans Motus!
 Les regles sont simples. Vous avez 5 essais pour trouver un mot, les lettres presentes dans le mot à trouver mais a la mauvaise place seront surlignées en jaune, les lettres exactement à la bonne place en rouge. Bonne chance!
-IMPORTANT: avant de jouer, n'oubliez pas d'activer les touches majuscules sur votre clavier, sinon le mot ne sera pas reconnu!
+IMPORTANT: avant de jouer, n'oubliez pas de vous assurer que les majuscules sont DESACTIVEES sur votre clavier, sinon le mot ne sera pas reconnu!
 
 V1 ----------------------------------------------------------------------------------------------------------------------------------------------
 Version Desktop
