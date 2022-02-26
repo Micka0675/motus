@@ -13,3 +13,8 @@ Now playable On mobile devices.
 Now, the first Letter is shown for each lines.
 Also, now Motus has no longer yellow box repetitions.
 LOwer Cases is required.
+
+V3 -----------------------------------------------------------------------------------------------------------------------------------------------
+Js optimization
+KeyUp detection
+Gameplay optimization
